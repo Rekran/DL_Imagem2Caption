@@ -1,1 +1,1 @@
-## Imagem2Caption Bahdanau Attention
+## Imagem2Caption CNN-LSTM Bahdanau Attention
