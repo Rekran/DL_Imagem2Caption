@@ -28,16 +28,12 @@ class Attention(nn.Module):
     def __init__(self, encoder_dim,decoder_dim,attention_dim):
         super(Attention, self).__init__()
         
-        self.attention_dim = attention_dim
-        
+        self.attention_dim = attention_dim 
         self.W = nn.Linear(decoder_dim,attention_dim)
         self.U = nn.Linear(encoder_dim,attention_dim)
-        
         self.A = nn.Linear(attention_dim,1)
         
-        
-        
-        
+    
     def forward(self, features, hidden_state):
         u_hs = self.U(features)     #(batch_size,num_layers,attention_dim)
         w_ah = self.W(hidden_state) #(batch_size,attention_dim)
